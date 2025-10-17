@@ -1,0 +1,41 @@
+{
+  "name": "Cubox",
+    "identifier": "cc.cubox.popclip.saver.v5.4",
+  "description": "Save selected text to Cubox with one click",
+  "app": {
+    "name": "Cubox Saver",
+    "link": "https://cubox.cc"
+  },
+  "popclipVersion": 4155,
+  "entitlements": ["network"],
+  "options": [
+    {
+      "identifier": "apiUrl",
+      "label": "Cubox API URL",
+      "type": "string",
+      "description": "Your Cubox API URL (from Cubox Web > Settings > Extensions & Automation > API Extension)"
+    },
+    {
+      "identifier": "defaultFolder",
+      "label": "Default Folder",
+      "type": "string",
+      "description": "Default folder name (optional, leave empty for inbox)",
+      "defaultValue": ""
+    },
+    {
+      "identifier": "defaultTag",
+      "label": "Default Tag",
+      "type": "string",
+      "description": "Default tag to add (optional)",
+      "defaultValue": "PopClip"
+    }
+  ],
+  "actions": [
+    {
+      "title": "Save to Cubox",
+      "icon": "icon.svg",
+      "requirements": ["text"],
+      "javascript file": "action.js"
+    }
+  ]
+}
